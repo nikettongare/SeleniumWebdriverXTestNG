@@ -1,0 +1,53 @@
+package newpackage;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class MyClass {
+	 public static void main(String[] args) {      
+		 WebDriver driver = new ChromeDriver();
+	        try {
+	            driver.get("https://www.google.com/ncr");
+	            WebElement searchBox = driver.findElement(By.name("q"));
+	            searchBox.sendKeys("calculator", Keys.RETURN);
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(1000));
+	            wait.until(ExpectedConditions.titleIs("calculator - Google Search"));
+	            
+	         
+	            
+	            String[] keyMap = new String[]{"", "", "", "", "", "", "", "", ""};
+	            // Assuming that the keyMap array is defined and initialized
+	            // with appropriate values for the given page
+	            // ...
+
+	            String fourthKey = keyMap[4];
+	            WebElement fourthKeyElement = driver.findElement(By.xpath("//*[@jsname='" + fourthKey + "']"));
+	            fourthKeyElement.click();
+
+	            WebElement plusElement = driver.findElement(By.xpath("//*[@jsname='" + keyMap[5] + "']"));
+	            plusElement.click();
+
+	            WebElement eighthKeyElement = driver.findElement(By.xpath("//*[@jsname='" + keyMap[8] + "']"));
+	            eighthKeyElement.click();
+
+	            WebElement equalsElement = driver.findElement(By.xpath("//*[@jsname='" + keyMap[9] + "']"));
+	            equalsElement.click();
+
+	            WebElement resultElement = driver.findElement(By.xpath("//*[@jsname='VssY5c']"));
+	            String text = resultElement.getText();
+
+	            System.out.println("The result is: " + text);
+	        } catch (Exception e) {
+	            System.out.println("Error: " + e.getMessage());
+	        } finally {
+	            driver.quit();
+	        }
+	    }
+}
