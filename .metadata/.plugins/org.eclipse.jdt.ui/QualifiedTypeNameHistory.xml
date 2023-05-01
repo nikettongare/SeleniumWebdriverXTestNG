@@ -3,4 +3,13 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.devtools.v110.indexeddb.model.Key"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFRow"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.DataFormatter"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+    <fullyQualifiedTypeName name="com.ReadXLData"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
 </qualifiedTypeNameHistroy>
